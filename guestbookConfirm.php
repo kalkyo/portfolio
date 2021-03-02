@@ -38,7 +38,7 @@ include ('includes/functions.php');
 
 
     $sql = "INSERT INTO guestbook (first, last, job_title, company, linkedin, met, message, datestamp) VALUES('$first', '$last', '$job_title', '$company', '$linkedin', '$met',
-        '$message', CURRENT_TIMESTAMP)";
+        '$message', NOW() )";
     echo "<p class =text-light> $sql </p>";
 
     $success = mysqli_query($cnxn, $sql);
